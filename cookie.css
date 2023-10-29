@@ -1,0 +1,158 @@
+body {
+    padding-top: 30px;
+    font-family: Arial;
+    background-color: lightblue;
+    width: 500px;
+    margin: auto;
+    text-align: center;
+}
+
+@font-face {
+    font-family: 'CustomFont';
+    src: url('70SdiscopersonaluseBold-w14z2.otf') format('opentype');
+}
+
+h2, #titel {
+    margin: 0;
+    padding: 0;
+    font-family: 'CustomFont', Arial, sans-serif;
+    font-size: 35px;
+    font-style: italic;
+    font-weight: bolder;
+    color: whitesmoke;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+p, #totalClicks {
+    font-size: 20px;
+    color: white;
+    margin: 5px;
+}
+
+#titles {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+#inventorySection, #shopSection {
+    flex: 1;
+}
+
+#inventorySection {
+    text-align: left;
+    position: relative;
+    left: -80px;
+}
+
+#shopSection {
+    text-align: right;
+    position: relative;
+    right: -80px;
+}
+
+#titel {
+    flex: 2;
+    text-align: center;
+    font-weight: bolder;
+}
+
+#inventory, #instrumentsScore {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 25px;
+}
+
+#inventory {
+    position: absolute;
+    left: -90px;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-top: 30px;
+}
+
+#centeredDrumAndInstruments {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    margin-top: 30px;
+}
+
+#instrumentsScore {
+    position: absolute;
+    left: calc(100% - 70px);
+    top: 25%;
+    transform: translateY(-50%);
+}
+
+#guitar, #trumpet, #cymbal {
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#inventory img.iconStyle, #guitar img, #trumpet img, #cymbal img {
+    width: 40px;
+    height: auto;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    background-color: #add8e6;
+    border-radius: 8px;
+    padding: 5px;
+    transition: box-shadow 0.2s;
+}
+
+#inventory img.iconStyle:hover, #guitar img:hover, #trumpet img:hover, #cymbal img:hover {
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+#drum {
+    position: relative;
+    border: 8px solid firebrick;
+    width: 280px;
+    text-align: center;
+    background-color: ghostwhite;
+    margin-top: -10px;
+}
+
+#drum img {
+    transition: transform 0.2s;
+}
+
+#drum img:first-child {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+}
+
+#drum img:last-child {
+    z-index: 2;
+    position: relative;
+}
+
+#drum img.tilt-left {
+    transform: rotate(-10deg);
+}
+
+#drum img.tilt-right {
+    transform: rotate(10deg);
+}
+
+#contentWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+#mainContainer {
+    position: relative;
+}
